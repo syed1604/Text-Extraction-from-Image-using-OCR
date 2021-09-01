@@ -1,0 +1,5 @@
+https://github.com/UB-Mannheim/tesseract/wiki
+Download tesseract from above link based on your PC requirments.
+pip install flask
+pip install wekzeug
+To import ocr.py you need to place all the files in same directory.
