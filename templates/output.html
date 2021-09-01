@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    #h{text-align: center;}
+
+</style>
+<body style="background-color:powderblue;">
+ <head>
+   <title>Home</title>
+ </head>
+ <body>
+
+  
+   <h1 id="h">Text extraction using OCR</h1>
+  
+   <form id="h" method=post  enctype=multipart/form-data>
+     <p><input type=file name=file>
+        <input type=submit value=UPLOAD >
+   </form>
+   
+   <h1 id='h'>Result:</h1>
+   
+   {% if img_src %}
+   <p id='h' style="font-size:25px;">Image processed</p>
+    <p id='h'> <img src="{{url_for('static',filename= img_src) }}" width="200" height="200"></p>
+   {% endif %}
+  
+   {% if extracted_text %}
+     <p id ='h' style="font-size:25px">The extracted text is : {{ extracted_text }} </p>
+  
+   {% else %}
+    <P id ='h' style="font-size:25px">The extracted text will be displayed here</P>
+   {% endif %}
+ </body>
+</html>
